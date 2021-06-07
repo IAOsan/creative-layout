@@ -1,0 +1,5 @@
+section.team#Team
+   h2.heading--section Team 
+   .team__grid 
+      each member in teamMembers
+         +teamCard(member.img, member.name, member.rol, member.languages, member.story)

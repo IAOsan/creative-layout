@@ -1,0 +1,5 @@
+section.customers#Customers
+   h2.heading--section Customers 
+   .customers__grid 
+      each customer in customers 
+         +customerCard(customer.text, customer.stars, customer.img, customer.name)

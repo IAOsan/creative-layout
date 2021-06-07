@@ -1,0 +1,10 @@
+header.header#Design
+   nav.nav 
+      ul.nav__list 
+         each link in navlinks 
+            li.nav__item 
+               a.nav__link(href=`#${link}`) #{link}
+   .header__floatBox
+   h1.heading.heading--1 Creative Design
+   .header__logoBox
+      i.fas.fa-bezier-curve.header__logo

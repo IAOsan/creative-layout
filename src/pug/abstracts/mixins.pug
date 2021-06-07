@@ -1,0 +1,29 @@
+mixin customerCard(text, stars, img,name)
+   article.customer 
+      i.fas.fa-quote-left.customer__iconQuote
+      p.customer__text #{text}
+      .customer__rating 
+         each star in stars
+            i.customer__ratingIcon(class=star)
+      img.customer__photo(src=`./assets/img/${img}`, alt=name)
+      h4.customer__name #{name}
+
+mixin teamCard(img, name, rol, languages, story) 
+   article.teamMember  
+      img.teamMember__photo(src=`./assets/img/${img}`, alt=name)
+      h3.teamMember__name #{name}
+         | 
+         span (#{rol})
+      ul.teamMember__skills 
+         each language in languages
+            li.teamMember__skill #{language}
+      a.btn.teamMember__btn(href="#") Projects
+      .story__btn(title="My Story") 
+      .story
+         h4.story__heading About me
+         p.story__paragraph #{story}
+
+
+
+mixin form 
+   p form

@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   -webkit-box-sizing: inherit;
+   box-sizing: inherit;
+}
+/* cambiar todas las unidades absolutas de px a REM */
+/* para que seas mas facil los breakpoints */
+/* se usa 10 px para evitar demasiados calculos */
+/* se usa el 100% porque es en relacion al fontsize del navegador que por defecto es 16px */
+/* versiones viejas de iE no soporta rems */
+html {
+   font-size: 62.5%; /* da como resultado 10px en lugar de 16px que es 100% */
+   @supports (scroll-behavior: smooth) {
+      scroll-behavior: smooth;
+   }
+   @include respond(768) {
+      font-size: 50%;
+   }
+   @include respond(576) {
+      font-size: 45%;
+   }
+}
+
+body {
+   box-sizing: border-box;
+   min-height: 100vh;
+}
+
+img {
+   width: 100%;
+   height: auto;
+}
+
+.btn__scrollUp {
+   width: 5rem;
+   height: 5rem;
+   background-color: var(--c-blue);
+   color: #fff;
+   position: fixed;
+   bottom: 5rem;
+   right: 5rem;
+   border-radius: 50%;
+   text-align: center;
+   font-size: 1.6rem;
+   padding-top: calc(5rem / 4);
+   transition: var(--transition);
+   &:hover {
+      background-color: #2bc1d4;
+   }
+   @include respond(576) {
+      bottom: 5rem;
+      right: 3rem;
+   }
+}

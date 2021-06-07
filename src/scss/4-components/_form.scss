@@ -1,0 +1,111 @@
+.form {
+   background-color: #f4f6ff;
+   width: 45rem;
+   padding: 3rem;
+   border-radius: 0.5rem;
+   box-shadow: 3rem 3rem 4rem var(--c-grey-3);
+   transform: rotateY(-20deg);
+   transition: var(--transition);
+   // flex
+   display: flex;
+   flex-direction: column;
+   &:hover {
+      transform: rotateY(-20deg) translateY(-2rem);
+      box-shadow: 5rem 5rem 7rem #aaa;
+      @include respond(1400) {
+         transform: translateY(-1rem);
+      }
+   }
+   @include respond(1400) {
+      transform: rotateY(0deg);
+   }
+   @include respond(768) {
+      margin: 4rem 0;
+      box-shadow: 2rem 2rem 3rem var(--c-grey-3);
+   }
+   &__grid {
+      width: 80%;
+      height: 50%;
+      background-color: #e5e9ff;
+      box-shadow: 0.3rem 0.3rem 0.4rem #ccc, -0.1rem -0.1rem 0.4rem #ccc;
+      // flex
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      box-shadow: 0.3rem 0.3rem 0.4rem #ccc, -1rem -1rem -0.4rem #ccc;
+      border-radius: 0.4rem;
+      perspective: 100rem;
+      @include respond(1400) {
+         perspective: 0;
+      }
+      @include respond(992) {
+         height: 60%;
+      }
+      @include respond(992) {
+         height: auto;
+         background-color: transparent;
+         box-shadow: none;
+      }
+   }
+   &__img {
+      max-height: 45rem;
+      height: 100%;
+      width: auto;
+      background-color: rgba(50, 231, 255, 0.8);
+      padding: 5rem;
+      opacity: 0.8;
+      box-shadow: -3rem 3rem 4rem #aaa;
+      border-radius: 0.5rem;
+      transform: rotateY(20deg);
+      transition: var(--transition);
+      &:hover {
+         transform: rotateY(20deg) translateY(-2rem);
+         box-shadow: -5rem 5rem 7rem #aaa;
+      }
+      @include respond(1400) {
+         display: none;
+      }
+   }
+   &__control {
+      margin: 1rem;
+      padding: 1rem;
+      font-size: 1.3rem;
+      letter-spacing: 0.3rem;
+      border: none;
+      border-radius: 2rem;
+      box-shadow: inset 0.5rem 0.5rem 2rem #fafafa,
+         inset -0.5rem -0.5rem 2rem #ececec;
+      transition: var(--transition);
+      &:active,
+      &:focus {
+         outline: none;
+         border: 1px solid gray;
+      }
+   }
+   textarea {
+      max-height: 12rem;
+      min-height: 12rem;
+      max-width: 100%;
+      min-width: 70%;
+   }
+   &__btn {
+      margin: 1rem;
+      padding: 1rem;
+      font-size: 1.3rem;
+      letter-spacing: 0.3rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      background-color: rgba(50, 231, 255, 0.8);
+      color: #fff;
+      font-weight: bolder;
+      letter-spacing: 0.5rem;
+      transition: var(--transition);
+      &:active {
+         transform: translateY(0.5rem);
+      }
+      &:hover {
+         background-color: #32e7ff;
+      }
+   }
+}

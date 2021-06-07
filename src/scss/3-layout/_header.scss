@@ -1,0 +1,85 @@
+.header {
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   overflow: hidden;
+
+   &__floatBox {
+      background-color: rgba($color: $c-blue, $alpha: 0.8);
+      width: 150vw;
+      height: 150vw;
+      position: absolute;
+      // top: -119vw;
+      bottom: 48vh;
+      left: calc(50% - 150vw / 2);
+      border-radius: 45%;
+      animation: rotate 30s ease-in-out infinite;
+      &::before {
+         content: '';
+         width: 100%;
+         height: 100%;
+         background-color: rgba($color: $c-blue, $alpha: 0.1);
+         position: absolute;
+         top: 0;
+         left: 0;
+         border-radius: 40%;
+         animation: rotate 30s ease-in-out infinite;
+      }
+   }
+   &__logoBox {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 15rem;
+      color: rgba($color: $c-blue, $alpha: 0.8);
+      @include respond(1200) {
+         top: 70%;
+         font-size: 9vw;
+      }
+      @include respond(992) {
+         top: 75%;
+      }
+   }
+   &__logo {
+      text-shadow: 0.1rem 0.1rem 0.2rem #ddd, -0.1rem -0.1rem 0.2rem #ddd;
+   }
+}
+
+.nav {
+   position: relative;
+   top: 4rem;
+   z-index: 100;
+   &__list {
+      list-style: none;
+      // flexbox
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+   }
+   &__item {
+      text-align: center;
+      word-wrap: break-word;
+      hyphens: manual;
+      white-space: pre-wrap;
+      width: 1.5rem;
+      transition: all 500ms ease-in-out;
+
+      &:hover {
+         width: 15rem;
+         padding: 0.5rem;
+         background-color: rgba($color: #fff, $alpha: 0.2);
+         transition: all 1s ease-in-out;
+      }
+   }
+   &__link {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+      text-decoration: none;
+      color: #fff;
+      @include respond(1200) {
+         font-size: 2rem;
+      }
+   }
+}

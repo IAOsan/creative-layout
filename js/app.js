@@ -1,0 +1,1 @@
+class UI{constructor(){this.teamGrid=document.querySelector(".team__grid")}showStory(){this.teamGrid.addEventListener("click",(t=>{if(t.target.classList.contains("story__btn")){let e=t.target,s=e.nextElementSibling;e.classList.toggle("story__btn--change"),s.classList.toggle("story--change")}}))}}window.addEventListener("DOMContentLoaded",(()=>{(new UI).showStory()}));

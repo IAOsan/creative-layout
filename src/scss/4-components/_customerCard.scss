@@ -1,0 +1,54 @@
+.customer {
+   width: 35rem;
+   height: 50rem;
+   background-color: var(--c-grey-4);
+   border-radius: 0.5rem;
+   padding: 2rem;
+   box-shadow: var(--boxshadow);
+   text-align: center;
+   transition: var(--transition-s);
+   &:first-child {
+      align-self: flex-end;
+   }
+   &:last-child {
+      align-self: flex-start;
+   }
+   &:hover {
+      box-shadow: 2rem 2rem 3rem #ddd, -2rem -2rem 3rem #ddd;
+   }
+   @include respond(1400) {
+      margin: 5rem 10rem;
+   }
+   @include respond(576) {
+      margin: 5rem 5rem;
+   }
+   &__iconQuote {
+      font-size: 4rem;
+      color: var(--c-orange);
+   }
+   &__text {
+      font-size: 1.8rem;
+      margin: 2.5rem 0;
+      text-align: justify;
+      &::first-letter {
+         margin-left: 1rem;
+      }
+   }
+   &__rating {
+      font-size: 2rem;
+      color: var(--c-orange);
+   }
+   &__ratingIcon {
+   }
+   &__photo {
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 2rem 0;
+   }
+   &__name {
+      font-size: 2rem;
+      font-weight: 700;
+   }
+}

@@ -1,0 +1,58 @@
+/*
+font-family: 'Bellota Text', cursive;
+font-family: 'Monoton', cursive;
+*/
+body {
+   font-family: 'Bellota Text', cursive;
+   font-weight: 400;
+   line-height: 1.6;
+}
+
+.heading {
+   &--1 {
+      font-family: 'Monoton', cursive;
+      font-size: 8rem;
+      position: absolute;
+      top: 23vw;
+      left: 50%;
+      transform: translateX(-50%);
+      text-shadow: var(--t-shadow-1);
+      color: #fff;
+      background-color: #fff;
+      width: 85rem;
+      text-align: center;
+      padding: 0.8rem 1.6rem;
+      border-radius: 0.8rem;
+      opacity: 0.9;
+      @include respond(1200) {
+         top: 50vh;
+         font-size: 5vw;
+         width: 60%;
+      }
+      @include respond(992) {
+         top: 55vh;
+      }
+      @include respond(768) {
+         font-size: 7vw;
+         width: 80%;
+      }
+   }
+   &--section {
+      font-size: 10rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: var(--c-grey-2);
+      text-align: center;
+      opacity: 0.5;
+      text-shadow: var(--t-shadow-2);
+      @include respond(1200) {
+         font-size: 7.5vw;
+      }
+      @include respond(768) {
+         font-size: 7rem;
+      }
+      @include respond(576) {
+         font-size: 11vw;
+      }
+   }
+}

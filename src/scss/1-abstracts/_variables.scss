@@ -1,0 +1,17 @@
+:root {
+   // colors
+   --c-blue: #32e7ff;
+   --c-orange: #f08e0f;
+   --c-grey-1: #888;
+   --c-grey-2: #999;
+   --c-grey-3: #aaa;
+   --c-grey-4: #eee;
+   // general
+   --transition: all 300ms ease-in-out;
+   --transition-s: all 500ms ease-in-out;
+   --t-shadow-1: 0.3rem 0.3rem 0.3rem var(--c-grey-1);
+   --t-shadow-2: 2rem 2rem 4rem var(--c-grey-3);
+   --boxshadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #ddd;
+}
+
+$c-blue: #32e7ff;
